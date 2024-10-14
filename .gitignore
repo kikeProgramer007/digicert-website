@@ -1,0 +1,46 @@
+
+# Creado por https://www.toptal.com/developers/gitignore/api/wordpress
+# Inicio
+
+### WordPress ###
+# Nucleo
+#
+# Nota: si deseas preparar/confirmar archivos del núcleo de WP
+# puedes eliminar toda esta sección/hasta Configuración.
+# /wp-admin/
+/wp-content/languages
+# /wp-includes/
+
+# Configuración
+wp-config.php
+
+# Temas de ejemplo
+/wp-content/themes/twentytwentyfour*/
+/wp-content/themes/twentytwentythree*/
+/wp-content/themes/twentytwentytwo*/
+/wp-content/themes/virtue*/
+
+# Plugin de ejemplo
+/wp-content/plugins/hello.php
+
+# Subidas
+wp-content/uploads/2024/
+
+# Archivos de registro
+*.log
+
+# htaccess
+# /.htaccess
+
+# Todos los plugins
+# Nota: Si deseas incluir una lista blanca de plugins,
+# descomenta la siguiente línea
+/wp-content/plugins
+
+# Todos los temas
+# Nota: Si deseas incluir una lista blanca de temas,
+# descomenta la siguiente línea
+# /wp-content/themes
+
+
+# Fin
