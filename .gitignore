@@ -14,33 +14,32 @@
 # Configuración
 wp-config.php
 
-# Temas de ejemplo
-/wp-content/themes/twentytwentyfour*/
-/wp-content/themes/twentytwentythree*/
-/wp-content/themes/twentytwentytwo*/
-/wp-content/themes/virtue*/
-
-# Plugin de ejemplo
-/wp-content/plugins/hello.php
+# Ignorar el idioma y la fuente
+wp-content/lenguages
+wp-content/bcf-fonts
 
 # Subidas
-wp-content/uploads/2024/
+/wp-content/uploads
 
 # Archivos de registro
 *.log
 
+# Ignorar archivos de log en UpdraftPlus
+/wp-content/updraft/log*
+
 # htaccess
 # /.htaccess
 
-# Todos los plugins
-# Nota: Si deseas incluir una lista blanca de plugins,
-# descomenta la siguiente línea
-/wp-content/plugins
+# Ignorar todos los plugins
+/wp-content/plugins/*
+
+# No ignorar UpdraftPlus
+!/wp-content/plugins/updraftplus
 
 # Todos los temas
 # Nota: Si deseas incluir una lista blanca de temas,
 # descomenta la siguiente línea
-# /wp-content/themes
+/wp-content/themes
 
 
 # Fin
