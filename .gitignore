@@ -24,17 +24,12 @@ wp-content/bcf-fonts
 # Archivos de registro
 *.log
 
-# Ignorar archivos de log en UpdraftPlus
-/wp-content/updraft/log*
-
 # htaccess
 # /.htaccess
 
 # Ignorar todos los plugins
-/wp-content/plugins/*
-
-# No ignorar UpdraftPlus
-!/wp-content/plugins/updraftplus
+/wp-content/plugins
+/wp-content/updraft
 
 # Todos los temas
 # Nota: Si deseas incluir una lista blanca de temas,
