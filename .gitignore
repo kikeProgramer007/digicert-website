@@ -1,40 +1,13 @@
-
 # Creado por https://www.toptal.com/developers/gitignore/api/wordpress
-# Inicio
 
-### WordPress ###
-# Nucleo
-#
-# Nota: si deseas preparar/confirmar archivos del núcleo de WP
-# puedes eliminar toda esta sección/hasta Configuración.
-# /wp-admin/
-/wp-content/languages
-# /wp-includes/
+# Carpeta de Contenidos
+/wp-content
 
 # Configuración
 wp-config.php
-
-# Ignorar el idioma y la fuente
-wp-content/lenguages
-wp-content/bcf-fonts
-
-# Subidas
-/wp-content/uploads
 
 # Archivos de registro
 *.log
 
 # htaccess
 # /.htaccess
-
-# Ignorar todos los plugins
-/wp-content/plugins
-/wp-content/updraft
-
-# Todos los temas
-# Nota: Si deseas incluir una lista blanca de temas,
-# descomenta la siguiente línea
-/wp-content/themes
-
-
-# Fin
