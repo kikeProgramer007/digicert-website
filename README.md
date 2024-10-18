@@ -14,7 +14,10 @@ Los requisitos recomendados para el compilado de Wordpress:
 
 ### PASOS DE INSTALACION EN LOCAL
  
-<b>PASO 1:</b> Clonar repositorio en tu ordenador
+### Using pages
+
+Clonar repositorio en tu ordenador
+
 ```
 git clone https://github.com/kikeProgramer007/digicert-website.git
 ```
