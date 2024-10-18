@@ -14,7 +14,7 @@ Los requisitos recomendados para el compilado de Wordpress:
 
 ### PASOS DE INSTALACION EN LOCAL
  
-### Using pages
+### PASO 1
 
 Clonar repositorio en tu ordenador
 
