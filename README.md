@@ -12,53 +12,99 @@ Los requisitos recomendados para el compilado de Wordpress:
 - Git Instalado
 - WP-CLI Instalado
 
-### PASOS DE INSTALACION EN LOCAL
+## PASOS DE INSTALACION EN LOCAL
  
-### PASO 1
+### PASO 1: _Clonar repositorio en tu ordenador_
 
-Clonar repositorio en tu ordenador
-
+```bash
+git clone https://github.com/Digicert-Bolivia/digicert-website.git
 ```
-git clone https://github.com/kikeProgramer007/digicert-website.git
-```
-<b>PASO 2:</b> Creación de la base de datos
 
-- Crea la base de datos con el nombre de “digicert_website_db”
-- Importa la base de datos, el backup sql está en la raíz de proyecto con el nombre de “digicert_website_db.sql”
+### PASO 2: _Creación de la base de datos_
+- Crea la base de datos con el nombre de `“digicert_website_db”`
+- Importa la base de datos, el backup sql está en la raíz de proyecto con el nombre de `digicert_website_db.sql`
 
-<b>PASO 3:</b> Crear el wp-config.php para establecer conexión a bd
+### PASO 3: _Crear el `wp-config.php` para establecer conexión a bd_
 
-> **¡Importante!**  Debes tener instalado WP-CLI.
+> [!IMPORTANT]
+> Debes tener instalado WP-CLI.
 
-Establece las credencioales de conexion a la bd:
+Establece y ejecuta las credenciales de conexion a la bd:
 
-**Windows(cmd o PowerShell)**
+**Windows (cmd o PowerShell)**
 
-```
+```bash
 wp config create --dbname=digicert_website_db --dbuser=root --dbpass= --dbhost=localhost --path=C:\xampp\htdocs\digicert-website --allow-root
 ```
-**Linux(consola)**
+**Linux (consola)**
 
+```bash
+wp config create --dbname=digicert_website_db --dbuser=root --dbpass= --dbhost=localhost --path=/var/www/html/digicert-website --allow-root
 ```
-wp config create --dbname=digicert_webisite_db --dbuser=root --dbpass= --dbhost=localhost --path=/var/www/html/digicert-website --allow-root
-```
-<b>PASO 4:</b> Actualización de la URL Base con WP-CLI
+Luego Verifica que el `wp-config.php` se haya generado correctamente.
 
-> **¡Nota!** Utiliza una de estas opciones: PowerShell,Git Bash o Linux.
+### PASO 4: _Actualización de la URL Base con WP-CLI_
+> [!NOTE]
+> Utiliza una de estas opciones: PowerShell, Git Bash o Linux.
 
 Estar en modo administrador e ir a la ruta del proyecto por ejemplo en XAMPP:
 
-```
+```bash
 cd C:\xampp\htdocs\digicert-website
 ```
 
 Siempre se recomienda hacer un “simulacro” antes de realizar la búsqueda y el reemplazo reales. Esto mostrará cuántas instancias se cambiarán
 
-```
-wp search-replace --dry-run 'http://localhost:8082/digicert/' 'http://localhost:8082/digicert-website/'
+```bash
+wp search-replace --dry-run 'http://localhost/digicert/' 'http://localhost/digicert-website/'
 ```
 
 Ahora, para realizar la búsqueda y reemplazo real con WP-CLI, elimina el parámetro -dry-run
+```bash
+wp search-replace 'http://localhost/digicert/' 'http://localhost/digicert-website/'
 ```
-wp search-replace 'http://localhost:8082/digicert/' 'http://localhost:8082/digicert-website/'
+
+### PASO 5: _Instalar Plugin UpdraftPlus para restaurar carpeta "Content"_
+
+```bash
+wp plugin install updraftplus
 ```
+### PASO 6: _Restarurar Backups de Plugins, Themes, Uploads y Others_
+> [!IMPORTANT]
+> La Database NO debe restaurarse por que esta viculado con el anterior Dominio.
+
+1. Ir al [Panel de Administracion del Wordpress](http://localhost/digicert-website/wp-admin/)
+2. Ir al menu Updraftplus y clic en **Restore**
+   
+   | Imagen de Ejemplo |
+   | :-------------------------: |
+   | ![image](https://github.com/user-attachments/assets/5537ec79-a1da-4d81-ac9f-6fcbcf1d9e08) |
+   
+3. Marcar las opciones de **plugin, themes, uploads y other**. Luego presiona Next.
+   
+   | Imagen de Ejemplo |
+   | :-------------------------: |
+   | ![image](https://github.com/user-attachments/assets/27905ddc-bd50-413b-bca5-b710aae2ca06) |
+
+4. Esperamos a que los archivos se descarguen y luego clic en **Restore**
+   
+   | Imagen de Ejemplo |
+   | :-------------------------: |
+   | ![image](https://github.com/user-attachments/assets/677f4cab-5d3c-4120-a883-bcae54b7e278)|
+   
+5. Esperar el descomprimido e instalación
+
+   | Imagen de Ejemplo |
+   | :-------------------------: |
+   | ![image](https://github.com/user-attachments/assets/8fb83d4f-c66e-47ad-a8eb-45e13d22edb7) |
+
+6. Retornar a Menu de UpdraftPlus
+
+   | Imagen de Ejemplo |
+   | :-------------------------: |
+   | ![image](https://github.com/user-attachments/assets/a616a4ba-ef90-4304-bb99-a73f168e7bdb) |
+
+7. Finalmente ir a Visualizar la restaurancion en el [Sitio Web](http://localhost/digicert-website/)
+
+Finalmente ir a Visualizar la restauración en el <a href="http://localhost/digicert-website/" target="_blank">Sitio Web</a>.
+
