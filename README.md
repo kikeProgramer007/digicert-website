@@ -1,5 +1,5 @@
 ## SITIO WEB - DIGICERT
-El proyecto está desarrollado en WordPress, utilizando una base de datos MySQL. Todos los elementos esenciales del sitio, incluyendo plugins, temas, archivos subidos, fuentes y archivos de idioma (la carpeta wp-content), están respaldados en Google Drive para garantizar su seguridad y disponibilidad.
+El proyecto está desarrollado en WordPress, utilizando una base de datos MySQL. Todos los elementos esenciales del sitio, incluyendo plugins, temas, archivos subidos, fuentes y archivos de idioma (la carpeta wp-content), están respaldados en [Google Drive](https://drive.google.com/drive/folders/1tgUpDrhG4LTdisMbCz3Zi-rdXFG6ZcMO) para garantizar su seguridad y disponibilidad.
 
 ## Requisitos
 
@@ -13,7 +13,7 @@ Los requisitos recomendados para el compilado de Wordpress:
 - WP-CLI Instalado
 
 ## PASOS DE INSTALACION EN LOCAL
- 
+
 ### PASO 1: _Clonar repositorio en tu ordenador_
 
 ```bash
@@ -26,8 +26,14 @@ git clone https://github.com/Digicert-Bolivia/digicert-website.git
 
 ### PASO 3: _Crear el `wp-config.php` para establecer conexión a bd_
 
+
 > [!IMPORTANT]
-> Debes tener instalado WP-CLI.
+> Debes tener **WP-CLI** instalado. Si aún no lo has hecho, puedes elegir una de las siguientes opciones de instalación:
+> 
+> - Opción 1 (Linux): [Guía de Instalación de WP-CLI de Hostinger](https://www.hostinger.es/tutoriales/wp-cli) para obtener instrucciones detalladas.
+> - Opción 2 (Linux): [Guía de Uso de WP-CLI en AyudaWP](https://ayudawp.com/wp-cli-la-interfaz-de-comandos-de-wordpress-guia-de-uso/) para aprender cómo instalar y usar WP-CLI.
+> - Opción 3 (Windows): [Guia de instalacion WP-CLI en Windows](https://desarrollowp.com/blog/tutoriales/wp-cli-parte-1-instalacion-primeros-pasos/) .
+
 
 Establece y ejecuta las credenciales de conexion a la bd:
 
@@ -36,6 +42,7 @@ Establece y ejecuta las credenciales de conexion a la bd:
 ```bash
 wp config create --dbname=digicert_website_db --dbuser=root --dbpass= --dbhost=localhost --path=C:\xampp\htdocs\digicert-website --allow-root
 ```
+
 **Linux (consola)**
 
 ```bash
@@ -71,7 +78,7 @@ wp plugin install updraftplus
 ```
 ### PASO 6: _Restarurar Backups de Plugins, Themes, Uploads y Others_
 > [!IMPORTANT]
-> La Database NO debe restaurarse por que esta viculado con el anterior Dominio.
+> El Respaldo Database NO debe restaurarse por que esta viculado con el anterior Dominio.
 
 1. Ir al [Panel de Administracion del Wordpress](http://localhost/digicert-website/wp-admin/)
 2. Ir al menu Updraftplus y clic en **Restore**
@@ -92,7 +99,7 @@ wp plugin install updraftplus
    | :-------------------------: |
    | ![image](https://github.com/user-attachments/assets/677f4cab-5d3c-4120-a883-bcae54b7e278)|
    
-5. Esperar el descomprimido e instalación
+5. Esperar el descompresión e instalación
 
    | Imagen de Ejemplo |
    | :-------------------------: |
@@ -104,7 +111,8 @@ wp plugin install updraftplus
    | :-------------------------: |
    | ![image](https://github.com/user-attachments/assets/a616a4ba-ef90-4304-bb99-a73f168e7bdb) |
 
-7. Finalmente ir a Visualizar la restaurancion en el [Sitio Web](http://localhost/digicert-website/)
-
-Finalmente ir a Visualizar la restauración en el <a href="http://localhost/digicert-website/" target="_blank">Sitio Web</a>.
-
+7. Finalmente dirigete a visualizar la restauración del [Sitio Web](http://localhost/digicert-website/)
+##
+### NOTAS ADICIONALES
+- **Enlace del Backup:** Se Almacena en esta [Carpeta de Drive](https://drive.google.com/drive/folders/1tgUpDrhG4LTdisMbCz3Zi-rdXFG6ZcMO)
+- **Extensión ZIP:** Habilitar o descomentar la `extension=zip` en el archivo de configuración de `php.ini`
